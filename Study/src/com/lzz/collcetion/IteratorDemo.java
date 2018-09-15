@@ -3,7 +3,7 @@ package com.lzz.collcetion;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
-
+//HelloWorld
 public class IteratorDemo {
 	public static void main(String[] args) {
 		Set<String> set = new TreeSet<>();
@@ -17,7 +17,7 @@ public class IteratorDemo {
 		set.add("G");
 		set.add("K");
 		set.add("F");
-		//Iterator接口实现集合输出
+		//Iterator陆脫驴脷脢碌脧脰录炉潞脧脢盲鲁枚
 //		Iterator<String> iterator = set.iterator();
 //		while(iterator.hasNext()) {
 //			System.out.println(iterator.next());
