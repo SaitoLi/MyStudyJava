@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-
+//123
 public class FileCopyDemo {
 	public static void main(String[] args) throws Exception{
 		if(args.length != 2) { //初始化参数不足2位
