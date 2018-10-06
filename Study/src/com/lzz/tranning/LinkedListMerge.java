@@ -1,6 +1,5 @@
 package com.lzz.tranning;
 
-import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
@@ -38,6 +37,7 @@ public class LinkedListMerge {
 				System.out.print(integer + " -> ");
 			}
 		}
+		sc.close();
 	}
 	
 	public static int[] merge(int[] A, int[] B) {
