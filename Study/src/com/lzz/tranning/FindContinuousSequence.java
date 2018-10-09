@@ -2,7 +2,11 @@ package com.lzz.tranning;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+   *   寻找和为s的连续正数序列
+ * @author CunsiALIEN
+ *
+ */
 public class FindContinuousSequence {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
