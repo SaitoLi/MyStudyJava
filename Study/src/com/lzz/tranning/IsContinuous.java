@@ -24,6 +24,9 @@ public class IsContinuous {
 	}
 	
 	public static boolean isContinuous(int[] numbers) {
+		if(numbers.length == 0) {
+			return false;
+		}
 		Arrays.sort(numbers);
 		int countZero = 0;
 		for(int i = 0 ; i < numbers.length - 1 ; i++) {
