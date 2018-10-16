@@ -39,26 +39,5 @@ public class MaxSequenceSum {
 		System.out.println("MaxSum of a1 is " + maxsum1);
 		System.out.println("MaxSum of a2 is " + maxsum2);
 		
-//		Scanner sc = new Scanner(System.in);
-//		int len = 10;
-//		int[] nums = new int[len];
-//		for(int i = 0 ; i < len ; i++) {
-//			nums[i] = sc.nextInt();
-//		}
-//		int maxsum = maxSequenceSum(nums, nums.length);
-//		System.out.println(maxsum);
-//		sc.close();
-		
-//		Scanner sc = new Scanner(System.in);
-//		String str = sc.nextLine();
-//		String[] nums = str.split(",");
-//		nums[0] = nums[0].substring(1);
-//		nums[nums.length - 1] = nums[nums.length - 1].substring(0,nums[nums.length - 1].length() - 2);
-//		int[] array = new int[nums.length];
-//		for(int i =0  ; i < nums.length ; i++) {
-//			array[i] = Integer.parseInt(nums[i]);
-//		}
-//		System.out.println(maxSequenceSum(array, array.length));
-//		sc.close();
 	}
 }
