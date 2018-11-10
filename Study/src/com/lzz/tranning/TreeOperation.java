@@ -8,10 +8,139 @@ import java.util.Stack;
 import com.lzz.vo.TreeNode;
 
 public class TreeOperation {
-	public static void main(String[] args) {
-
+	private TreeNode root;
+	
+	public TreeOperation() {
+		
+	}
+	
+	public TreeOperation(TreeNode root) {
+		this.root = root;
+	}
+	
+	
+	public TreeNode getRoot() {
+		return root;
 	}
 
+	public void setRoot(TreeNode root) {
+		this.root = root;
+	}
+
+	/**
+	   *   寻找值为target的节点
+	 * @param target 所寻找的目标值
+	 * @return 目标节点
+	 */
+	public TreeNode find(int target) {
+		if(root == null) {
+			return null;
+		}
+		TreeNode cur = root;
+		while(cur.val != target) {
+			if(cur.val < target) {
+				cur = cur.left;
+			}
+			else {
+				cur = cur.right;
+			}
+			if(cur == null) {
+				return null;
+			}
+		}
+		return cur;
+	}
+	/**
+	   *   插入节点
+	 * @param val 所插入节点的val值
+	 */
+ 	public void insert(int val) {
+		TreeNode node = new TreeNode(val);
+		if(root == null) { //如果树为空，则node为根节点
+			root = node;
+		}
+		else {
+			TreeNode cur = root; 
+			TreeNode par;
+			while(true) {
+				par = cur;  //记录当前位置
+				if(val < cur.val) {  //val小于当前值，与左节点比较
+					cur = cur.left;
+					if(cur == null) {
+						par.left = node;
+						return;
+					}
+				}
+				else {
+					cur = cur.right; //val大于当前值，与右节点比较
+					if(cur == null) { 
+						par.right = node;
+						return;
+					}
+				}
+			}
+		}
+	}
+	
+	/**
+	   *  寻找值最小的节点
+ 	 * @return last
+ 	   *  二叉搜索树中，最左第一个叶子节点即为值最小的节点
+ 	   *  同理，最右边的叶子节点即为值最大的节点 
+	 */
+	public TreeNode minNum() {
+		TreeNode cur = root;  //记录当前位置
+		TreeNode last = cur;  //记录最后的最小值
+		while(cur != null) {
+			last = cur;
+			cur = cur.left;
+		}
+		return last;
+	}
+	
+	public void delete(int target) {
+		
+	}
+	
+	/**
+	   *   中序遍历
+	 * @param pRoot 所遍历二叉树的根节点
+ 	 */
+	public void inOrder(TreeNode pRoot) {
+		 if(pRoot == null) {
+			 return;
+		 }
+		 inOrder(pRoot.left);
+		 System.out.print(pRoot.val + " ");
+		 inOrder(pRoot.right);
+	}
+	
+	/**
+	   *   前序遍历
+	 * @param pRoot
+	 */
+	public void preOrder(TreeNode pRoot) {
+		if(pRoot == null) {
+			return;
+		}
+		System.out.print(pRoot.val + " ");
+		preOrder(pRoot.left);
+		preOrder(pRoot.right);
+	}
+	
+	/**
+	   *   后序遍历
+	 * @param pRoot
+	 */
+	public void postOrder(TreeNode pRoot) {
+		if(pRoot == null) {
+			return;
+		}
+		postOrder(pRoot.left);
+		postOrder(pRoot.right);
+		System.out.print(pRoot.val + " ");
+	}
+	
 	/**
 	 * 判断二叉树是否为对称二叉树 如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。
 	 * 
